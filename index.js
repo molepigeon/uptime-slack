@@ -45,7 +45,7 @@ exports.init = function() {
         if (err) return console.error(err);
         payload.channel     = webhooks.channel;
         payload.username    = webhooks.username;
-        payload.text        = '<' + webhooks.dashboardUrl + '/dashboard/checks/' + check._id + '?type=hour&date=' + checkEvent.timestamp.valueOf() + '|' + check.name +'>' + ' ' + checkEvent.message;
+        payload.text        = 'UPTIME: <' + webhooks.dashboardUrl + '/dashboard/checks/' + check._id + '?type=hour&date=' + checkEvent.timestamp.valueOf() + '|' + check.name +'>' + ' ' + checkEvent.message;
         payload.icon_emoji  = webhooks.icon_emoji;
 
         hrefs.forEach(function(href) {
